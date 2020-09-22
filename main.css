@@ -1,0 +1,427 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+/*div za preload pozadina koje se koriste za usluge*/
+#preload {
+	background: url(images/restoran.jpg) no-repeat -9999px -9999px;
+	background: url(images/restoran.jpg) no-repeat -9999px -9999px,
+			url(images/bazen2.jpg) no-repeat -9999px -9999px,
+			url(images/konfsala.jpg) no-repeat -9999px -9999px,
+			url(images/247.jpg) no-repeat -9999px -9999px,
+			url(images/mladenci.jpg) no-repeat -9999px -9999px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+#header-pocetna-holder {
+	height: 100vh;
+	border-bottom: solid 1px black;
+	background: url(images/pocetna.jpg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+}
+
+#header-holder {
+	border-bottom: solid 1px white;
+	background: rgba(52, 58, 64, 0.6);
+	color: white;
+	height: 80px;
+	position: sticky;
+}
+
+#header {
+	display: flex;
+	width: 1000px;
+	margin: 0px auto;
+	height: 80px;
+}
+
+#logo-holder {
+	flex-grow: 1;
+	font-size: 20px;
+}
+
+#logo-holder h1 {
+	padding: 25px 0px 0px 10px;
+}
+
+#menu-holder {
+	flex-grow: 1;
+}
+
+#menu-holder ul {
+	list-style-type: none;
+}
+
+#menu {
+	display: flex;
+}
+
+#menu li {
+	flex-grow: 1;
+	
+}
+
+#menu-holder ul li {
+	padding: 30px 0px 0px 10px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 23px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+	color: #bebebe;
+}
+
+#text-holder {
+	width: 700px;
+	position: absolute;
+	text-align: center;
+	top: 45%;
+	margin: 0px auto;
+	right: 0;
+	left: 0;
+	color: #ffffff;
+}
+ #pocetna {
+	width: 100%;
+	height: 100%;
+	background: rgba(52, 58, 64, 0.6);
+ }
+
+ #pocetna-bigtxt {
+	font-size: 30px;
+	
+ }
+
+#pocetna-smltxt {
+	font-size: 20px;
+	margin-top: 30px;
+}
+
+#onama-holder {
+	height: 700px;
+	border-bottom: solid 1px #cfcece;
+}
+
+#onama-overflow {
+	width: 700px;
+	position: relative;
+	top: 10%;
+	left: 0;
+	right: 0;
+	margin: 0px auto;
+	height: 600px;
+}
+
+#onama-slika {
+	float: right;
+	margin-top: 50px;
+	border-radius: 15%;
+	box-shadow: 5px 10px 8px #888888;
+}
+#onama-txt {
+	font-size: 22px;
+	width: 350px;
+	height: 550px;
+    padding: 10px;
+	box-shadow: 5px 10px 8px #888888;
+	border-radius: 30px;
+}
+
+#galerija-holder {
+	height: 600px;
+	box-sizing:border-box;
+	border-bottom: solid 1px #cfcece;
+}
+
+#slajdovi-holder {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+.slajd {
+  display: none;
+  width: 700px;
+  height: 400px;
+  margin: 50px auto 10px auto;
+}
+
+.slajd img {
+	max-width: 100%;
+	max-height: 500px;
+}
+
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev:hover, #next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.brojevi {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+#tacke-holder {
+	text-align:center;
+}
+.tacka {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.aktivan, .tacka:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#galerija-naslov {
+	margin: 20px auto 0px auto;
+	text-align: center;
+	font-size: 20px;
+}
+
+#usluge-holder {
+	height: 100vh;
+}
+
+
+#usluge {
+	display: flex;
+	width: 900px;
+	margin: 0px auto;
+}
+
+#usluge-holder h2 {
+	padding-top: 50px;
+	text-align: center;
+	margin-bottom: 50px;
+	color: #ffffff;
+	font-size: 40px;
+}
+
+#lista-usluga {
+	flex-grow: 1;
+	flex-basis: 0;
+}
+
+#opisi-usluga {
+	flex-grow: 2;
+	flex-basis: 0;
+}
+
+#lista-usluga label {
+	display: block;
+	margin-bottom: 10px;
+	border: 1px solid #ffffff;
+	background-color: #ffffffC0;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 20px;
+}
+
+#opisi-usluga input {
+	display: none;
+}
+
+#opisi-usluga .opis-usluge {
+	display: none;
+}
+
+#opisi-usluga input:checked+.opis-usluge {
+	display: block;
+}
+
+.opis-usluge {
+	margin-left: 10px;
+	border: 1px solid #ffffff;
+	background-color: #ffffffC0;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 20px;
+}
+
+
+#kontakt-holder {
+	height: 800px;
+	background:  url(images/kontakt.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#kontakt {
+	display: flex;
+	width: 1000px;
+	margin: 0px auto;
+	justify-content: space-between;
+	
+}
+
+#kontakt-holder h2 {
+	text-align: center;
+	color: #ffffff;
+	margin-bottom: 64px;
+	padding-top: 50px;
+	font-weight: 900;
+	font-size: 33px;
+}
+
+#kontakt-form h3 {
+    color: #ffffff;
+	margin-bottom: 32px;
+	font-size: 30px;
+}
+
+#kontakt-form {
+    width: 600px;
+    background: rgba(221, 221, 221, 0.6);
+    padding: 48px;
+	box-sizing: border-box;
+	height: 630px;
+	border-radius: 20px;
+	box-shadow: 5px 10px 8px #888888;
+}
+
+#kontakt-form label {
+    display: block;
+    color: #ffffff;
+	margin-top: 16px;
+	font-weight: 900;
+}
+
+#kontakt-form button {
+	background: rgba(221, 221, 221, 0.6); 
+	border: solid 2px #fff;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 30px; 
+	padding: 10px 30px;
+	cursor: pointer; 
+
+}
+
+#kontakt-form input,
+#kontakt-form textarea {
+	display: block;
+    
+    padding: 10px;
+    border: 1px solid #ced4da;
+    width: 100%;
+    box-sizing: border-box;
+    height: 43px;
+    font-size: 16px;
+    color: #495057;
+}
+
+#kontakt-form  textarea {
+    height: 170px;
+    margin-bottom: 32px;
+    resize: none;
+}
+
+#adresa-holder {
+    width: 350px;
+    background: rgba(221, 221, 221, 0.8);
+    padding: 35px 30px;
+    box-sizing: border-box;
+	height: 300px;
+	border-radius: 20px;
+	margin-top: 100px;
+	box-shadow: 5px 10px 8px #888888;
+}
+
+#adresa-holder  label {
+    font-weight: 700;
+    display: block;
+    margin-top: 32px;
+}
+
+#adresa-holder  label:first-child {
+    margin-top: 0;
+}
+
+#adresa-holder  address {
+    margin-bottom: 24px;
+	font-style: normal;
+	color: #ffffff;
+	font-weight: 900;
+}
+
+#adresa-holder  a {
+    text-decoration: none;
+	color: #ffffff;
+	font-weight: 900;
+}
+
+#adresa-holder  a:hover {
+	text-decoration: underline;
+}
+
+#footer {
+	text-align: center;
+	height: 40px;
+	color: #888888;
+	background:  url(images/kontakt.jpg);
+	background-size: cover;
+	background-position: bottom;
+}

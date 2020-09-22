@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel="shortcut icon" href="" />
+        <title>Stranica</title>
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    </head>
+    <body>
+        <div id="header-pocetna-holder">
+            <div id="header-holder">
+                <div id="header">
+                
+                    <div id="logo-holder">
+                        <h1>Hotel Larkes</h1>
+                    </div>
+                    <nav id="menu-holder">
+                        <ul id="menu">
+                            <li><a href="#pocetna" class="active">Pocetna</a></li>
+                            <li><a href="#onama-holder">O nama</a></li>
+                            <li><a href="#galerija-holder">Galerija</a></li>
+                            <li><a href="#usluge-holder">Usluge</a></li>
+                            <li><a href="#kontakt-holder">Kontakt</a></li>
+                        </ul>
+                        
+                    </nav>
+                </div>
+            </div>
+            <div id='pocetna'>
+                <div id="text-holder">
+                    <div id="pocetna-bigtxt">
+                        <h2>DOBRODOSLI NA SAJT HOTELA LARKES</h2>
+                    </div>
+                    <div id="pocetna-smltxt">
+                        <p>,,Larkes´´ je hotel modernog dizajna sa 4 zvezdice i svojim sadržajem tokom cele godine ispuniće sve potrebe savremenog putnika. Hotel u koji ćete se uvek vraćati sa zadovoljstvom...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="onama-holder">
+            <div id="onama-overflow">
+                <img id="onama-slika" src="images/o-nama.jpg" alt="recepcija" height="300px" width="400px">
+                <div id="onama-txt"><p>Naša kvalitetna usluga i ljubazno osoblje koje Vam je na raspolaganju 24h učiniće sve da se u našim sobama i apartmanima osećate prijatno i opušteno kao kod kuće.</p><br>
+                    <p>U ponudi su elegantne i udobne sobe, restoran, konferencijska sala, sala za poslovne sastanke, teretane i bazen. Sve je popraćeno ljubaznim osobljem i fleksibilnim menadžmentom.</p><br>
+                    <p>Verujemo da ćete provesti ugodne trenutke odmora i poslovnog boravka kod nas u prijatnom ambijentu hotela Larkes.</p>
+                </div>
+            </div>
+        </div>
+        <div id="galerija-holder" >
+            <div id="galerija-naslov">
+                <h2>Galerija</h2>
+            </div>
+            
+            <div id="slajdovi-holder">
+                <div class="slajd fade">
+                    <div class="brojevi">1 / 4</div>
+                    <img src="images/recepcija.jpeg" id="slika1">
+                </div>
+                <div class="slajd fade">
+                    <div class="brojevi">2 / 4</div>
+                    <img src="images/bazen1.jpg" id="slika2">
+                </div>
+                <div class="slajd fade">
+                    <div class="brojevi">3 / 4</div>
+                    <img src="images/hrana1.jpg" id="slika3">
+                </div>
+                <div class="slajd fade">
+                    <div class="brojevi">4 / 4</div>
+                    <img src="images/soba1.jpg" id="slika3">
+                </div>
+                <a id="prev" onclick="pomeri(-1)">&#10094;</a>
+                <a id="next" onclick="pomeri(1)">&#10095;</a>
+            </div>
+              <br>
+            <div id="tacke-holder">
+                <span class="tacka" onclick="trenutanSlajd(1)"></span>
+                <span class="tacka" onclick="trenutanSlajd(2)"></span>
+                <span class="tacka" onclick="trenutanSlajd(3)"></span>
+                <span class="tacka" onclick="trenutanSlajd(4)"></span>
+            </div>
+
+        </div>
+        <div id="usluge-holder" style="background: url(images/restoran.jpg); background-size: cover; background-position: center;">
+            <h2>Usluge</h2>
+			<div id="usluge">
+				<div id="lista-usluga">
+					<label for="u1" onclick="promenaPozadine(1)">Restoran</label>
+					<label for="u2" onclick="promenaPozadine(2)">Bazen</label>
+					<label for="u3" onclick="promenaPozadine(3)">Konferencijska sala</label>
+					<label for="u4" onclick="promenaPozadine(4)">Usluga 24/7</label>
+					<label for="u5" onclick="promenaPozadine(5)">Program za mladence</label>
+				</div>
+				
+				<div id="opisi-usluga">
+					<input type="radio" name="usluga" value="1" id="u1" checked>
+					<div class="opis-usluge">
+						<h3>Restoran</h3>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>Nullam vel pulvinar sapien. Mauris rhoncus ligula ut magna fermentum vulputate.</p>
+						<p>Fusce sed mattis ante. Donec vel maximus nunc, vitae iaculis tortor.</p>
+                        <p>Vivamus ut enim id tortor mattis aliquam.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>Nullam vel pulvinar sapien. Mauris rhoncus ligula ut magna fermentum vulputate.</p>
+						<p>Fusce sed mattis ante. Donec vel maximus nunc, vitae iaculis tortor.</p>
+                        <p>Vivamus ut enim id tortor mattis aliquam.</p>
+                        <br>
+                        <p>Za više informacija, kontaktirajte nas putem stranice, maila ili telefona.</p>
+					</div>
+					
+					<input type="radio" name="usluga" value="2" id="u2">
+					<div class="opis-usluge">
+						<h3>Bazen</h3>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>Nullam vel pulvinar sapien. Mauris rhoncus ligula ut magna fermentum vulputate.</p>
+						<p>Fusce sed mattis ante. Donec vel maximus nunc, vitae iaculis tortor.</p>
+                        <p>Vivamus ut enim id tortor mattis aliquam.</p>
+                        <br>
+                        <p>Za više informacija, kontaktirajte nas putem stranice, maila ili telefona.</p>
+					</div>
+					
+					<input type="radio" name="usluga" value="3" id="u3">
+					<div class="opis-usluge">
+						<h3>Konferencijska sala</h3>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>Nullam vel pulvinar sapien. Mauris rhoncus ligula ut magna fermentum vulputate.</p>
+						<p>Fusce sed mattis ante. Donec vel maximus nunc, vitae iaculis tortor.</p>
+                        <p>Vivamus ut enim id tortor mattis aliquam.</p>
+                        <br>
+                        <p>Za više informacija, kontaktirajte nas putem stranice, maila ili telefona.</p>
+					</div>
+					
+					<input type="radio" name="usluga" value="4" id="u4">
+					<div class="opis-usluge">
+						<h3>Usluga 24/7</h3>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>Nullam vel pulvinar sapien. Mauris rhoncus ligula ut magna fermentum vulputate.</p>
+						<p>Fusce sed mattis ante. Donec vel maximus nunc, vitae iaculis tortor.</p>
+                        <p>Vivamus ut enim id tortor mattis aliquam.</p>
+                        <br>
+                        <p>Za više informacija, kontaktirajte nas putem stranice, maila ili telefona.</p>
+					</div>
+					
+					<input type="radio" name="usluga" value="5" id="u5">
+					<div class="opis-usluge">
+						<h3>Program za mladence</h3>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>Nullam vel pulvinar sapien. Mauris rhoncus ligula ut magna fermentum vulputate.</p>
+						<p>Fusce sed mattis ante. Donec vel maximus nunc, vitae iaculis tortor.</p>
+                        <p>Vivamus ut enim id tortor mattis aliquam.</p>
+                        <br>
+                        <p>Za više informacija, kontaktirajte nas putem stranice, maila ili telefona.</p>
+					</div>
+				</div>
+				
+			</div>
+		
+        </div>
+        <div id="kontakt-holder">
+            <h2>Kontaktirajte nas:</h2>
+            <div id="kontakt">
+                <div id="kontakt-form">
+                    <h3>Rezervacije i pitanja</h3>
+                    <form>
+                        <label for="ime">Ime</label>
+                        <input type="text" id="ime" placeholder="Unesite Vaše ime" required="">
+
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" placeholder="Unesite Vaš email" required="">
+
+                        <label for="tema">Usluga koja Vam je potrebna</label>
+                        <input type="text" id="tema" placeholder="Tema poruke" required="">
+
+                        <label for="poruka">Opis usluge</label>
+                        <textarea id="poruka" placeholder="Opišite Vašu uslugu"></textarea>
+
+                        <button id="submit">Pošalji</button>
+                    </form>
+                </div>
+
+                <div id="adresa-holder">
+                    <label>Naša adresa je:</label>
+                    <address>
+                        Izmišljena Ulica, br. 1402
+                    </address>
+
+                    <label>Dostupni smo 24/7 na telefonu:</label>
+                    <a href="tel:+381690000000">069-00-00-000</a>
+
+                    <label>Naš email je:</label>
+                    <a href="mailto:hotellarkes@gmail.com?Subject=Usluge">hotellarkes&#64;gmail&#46;com</a>
+                </div>
+            </div>
+            
+        </div>
+        <div id="footer">
+            <p>Copyright &copy; all rights reserved | Website by: Luka Spasojević SII 2019203323</p>
+        </div>
+        <div id="preload"></div>
+        <script src="main.js"></script>
+    </body>
+</html>
