@@ -1,17 +1,16 @@
 confirm("UPOZORENJE: Ovaj web sajt je napravljen kao lični projekat za ispit na fakultetu, nije namenjen za bilo koju vrstu komercijalne upotrebe.");
 
-//zadaje indeks 1, kao pocetnu vrednost
 var slajdIndeks = 1;
 prikaziSlajdove(slajdIndeks);
-//pomera sliku za indeks
+
 function pomeri(n) {
     prikaziSlajdove(slajdIndeks += n);
 }
-//poziva funkciju da se prikaze slajd sa odgovarajucim indeksom
+
 function trenutanSlajd(n) {
     prikaziSlajdove(slajdIndeks = n);
 }
-//funkcija za prikaz slajdova
+
 function prikaziSlajdove(n) {
   var i;
   var slajdovi = document.getElementsByClassName("slajd");
@@ -27,7 +26,7 @@ function prikaziSlajdove(n) {
   slajdovi[slajdIndeks-1].style.display = "block";
   tacke[slajdIndeks-1].className += " aktivan";
 }
-//menja pozadinu kada se klikne na label u uslugama
+
 function promenaPozadine(n) {
     switch(n) {
         case 1: document.getElementById("usluge-holder").style.cssText = "background: url(images/restoran.jpg); background-size: cover; background-position: center;"; break;
